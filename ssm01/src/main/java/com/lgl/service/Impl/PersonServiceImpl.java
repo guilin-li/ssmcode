@@ -15,15 +15,15 @@ public class PersonServiceImpl implements IPersonService {
     private IPersonDao iPersonDao;
     @Override
     public List<Person> findAll() {
-//        List<Person> list = iPersonDao.findAll();
-        System.out.println("findAll");
-        return null;
+        List<Person> list = iPersonDao.findAll();
+//        System.out.println("findAll");
+        return list;
     }
 
     @Override
     public void savePerson(Person person) {
-//        iPersonDao.save(person);
-        System.out.println("savePerson");
+        iPersonDao.save(person);
+//        System.out.println("savePerson");
 
     }
 }
