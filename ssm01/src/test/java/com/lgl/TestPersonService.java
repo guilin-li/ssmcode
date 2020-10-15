@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -37,5 +38,14 @@ public class TestPersonService {
         System.out.println(personService);
 
     }
+    @Test
+    public void test03(){
+        List<Person> peopleList = new ArrayList<>();
+        peopleList.add(new Person("jack1",1000.00));
+        peopleList.add(new Person("rode1",1800.00));
+        peopleList.add(new Person("tony1",2000.00));
 
+        personService.savePersons(peopleList);
+
+    }
 }

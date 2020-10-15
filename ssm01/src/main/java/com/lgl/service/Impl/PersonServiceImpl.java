@@ -26,4 +26,15 @@ public class PersonServiceImpl implements IPersonService {
 //        System.out.println("savePerson");
 
     }
+
+    @Override
+    public void savePersons(List<Person> person) {
+        for (int i = 0;i<person.size();i++){
+            if(i==2){
+                System.out.println(1/0);
+            }
+            iPersonDao.save(person.get(i));
+        }
+
+    }
 }
