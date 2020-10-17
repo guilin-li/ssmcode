@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <!-- 别名  com.lgl.domain.Person  person-->
-    <typeAliases>
-        <package name="com.lgl.domain"/>
-    </typeAliases>
+     <typeAliases>
+         <package name="com.lgl.domain"/>
+     </typeAliases>
     <environments default="mysql">
         <environment id="mysql">
             <transactionManager type="JDBC"/>
@@ -21,5 +21,6 @@
     <mappers>
         <package name="com.lgl.dao"/>
     </mappers>
+
 </configuration>
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lgl.dao.IPersonDao">
+    <select id="findAll" resultType="person">
+    select * from person;
+    </select>
+
+    <insert id="save" parameterType="person">
+        insert into person (name,money)values(#{name},#{money})
+    </insert>
+
+</mapper>
+

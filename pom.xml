@@ -10,6 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>ssm01</module>
+      <module>ssm02</module>
   </modules>
 
   <name>ssmcode</name>
