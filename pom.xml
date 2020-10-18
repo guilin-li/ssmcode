@@ -11,6 +11,9 @@
   <modules>
     <module>ssm01</module>
       <module>ssm02</module>
+    <module>ssm02_crud</module>
+
+
   </modules>
 
   <name>ssmcode</name>
