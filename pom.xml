@@ -12,6 +12,7 @@
     <module>ssm01</module>
       <module>ssm02</module>
     <module>ssm02_crud</module>
+    <module>ssm03_CRUD_ajax2</module>
 
 
   </modules>
