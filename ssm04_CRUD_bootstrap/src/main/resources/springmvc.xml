@@ -26,7 +26,6 @@
     <mvc:resources location="/images/" mapping="/images/**" />
     <mvc:resources location="/js/" mapping="/js/**" />
     <mvc:resources location="/fonts/" mapping="/fonts/**" />
-
     <!--开启SpringMVC注解的支持 @RequestMapping @RequestBody @ResponseBody-->
     <mvc:annotation-driven/>
 </beans>
