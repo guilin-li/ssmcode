@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-@RequestMapping("/deptv2") //写在类上面指定当前模块路径
-public class DepartmentV2Controller {
-    private static final Logger l = LoggerFactory.getLogger(DepartmentV2Controller.class);
+@RequestMapping("/deptv3") //写在类上面指定当前模块路径
+public class DepartmentV3Controller {
+    private static final Logger l = LoggerFactory.getLogger(DepartmentV3Controller.class);
     @Autowired
     private IDepartmentService departmentService;//controller调用 service层
     /*@RequestMapping(path="/xx")
@@ -90,6 +90,10 @@ public class DepartmentV2Controller {
         return Result.init(-200, "更新失败", null);
     }
 
+    @RequestMapping(path="/tempUI")
+    public String tempUI() {
+        return "temp";
+    }
 }
 
 
