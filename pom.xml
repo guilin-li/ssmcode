@@ -13,6 +13,8 @@
       <module>ssm02</module>
     <module>ssm02_crud</module>
     <module>ssm03_CRUD_ajax2</module>
+    <module>ssm04_CRUD_bootstrap</module>
+
 
 
   </modules>
