@@ -94,6 +94,20 @@ public class DepartmentV3Controller {
     public String tempUI() {
         return "temp";
     }
+    @RequestMapping(path="/addUIV3",method = RequestMethod.GET)
+    public String addUIV3(){
+        return "add_v3";
+    }
+    @RequestMapping(path="/editUIV3",method = RequestMethod.GET)
+    public String editUIV3(){
+        return "edit_v3";
+    }
+    @RequestMapping(path="/listUIV3",method = RequestMethod.GET)
+    public String listUIV3(){
+        return "list_v3";
+    }
+
+
 }
 
 
