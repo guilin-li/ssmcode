@@ -3,10 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <!-- 别名  com.lgl.domain.Person  person-->
-    <typeAliases>
+<!--    <typeAliases>
         <package name="com.lgl.domain"/>
-    </typeAliases>
-    <environments default="mysql">
+    </typeAliases>-->
+    <!--<environments default="mysql">
         <environment id="mysql">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
@@ -16,10 +16,24 @@
                 <property name="password" value="root"/>
             </dataSource>
         </environment>
-    </environments>
+    </environments>-->
     <!-- 核心 配置文件扫描到映射文件-->
-    <mappers>
+<!--    <mappers>
         <package name="com.lgl.dao"/>
-    </mappers>
+    </mappers>-->
+
+    <!--
+  参数合理化
+            如果当前currPage < 1  则按currPage = 1查询
+            如果当前currPage > totalPage  则按currPage = totalPage 查询
+   -->
+
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <property name="reasonable" value="true"/>
+        </plugin>
+    </plugins>
+
+
 </configuration>
 

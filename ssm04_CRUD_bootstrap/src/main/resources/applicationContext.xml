@@ -32,7 +32,33 @@
         <property name="dataSource" ref="dataSource"/>
 
         <property name="typeAliasesPackage" value="com.lgl.domain"/>
+<!--        <property name="configLocation" value="classpath:SqlMapConfig.xml"/>-->
+
+
+
+        <!-- PageHelper配置 -->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <!--使用下面的方式配置参数，一行配置一个 -->
+                        <!-- pageNum<=0 时会查询第一页 -->
+                        <!-- 指定数据库方言 -->
+                        <value>
+                            reasonable=true
+                            helperDialect=mysql
+                        </value>
+                    </property>
+                </bean>
+            </array>
+
+        </property>
+
+
+
     </bean>
+
+
     <!-- IPersonDao.xml  IPersonDao.java-->
     <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.lgl.dao"/>
